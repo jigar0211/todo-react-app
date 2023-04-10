@@ -1,0 +1,136 @@
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  background-color: #f0efe9;
+}
+.todo-container {
+  background-color: #ffffff;
+  height: 33.4rem;
+  width: auto;
+  box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  min-width: 250px;
+}
+.todo-date-container {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.todo-date-container {
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.date-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.day {
+  padding: 0px 4px;
+  font-size: 38px;
+  font-weight: 500;
+}
+.month-year {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.weekday {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 12rem;
+}
+.add-todo-btn-container {
+  display: flex;
+  justify-content: center;
+  bottom: -65px;
+  position: relative;
+}
+.add-todo-button {
+  background-color: rgb(52, 221, 156);
+  opacity: 0.9;
+  font-size: 38px;
+  color: rgba(0, 0, 0, 0.426);
+  text-align: center;
+  border: 1px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+.input-size {
+  width: 14.8rem;
+  height: 1.6rem;
+  margin-top: 2.5rem;
+  margin-left: 1rem !important;
+}
+/* css custom classes */
+.task-list-container {
+  margin-top: 4rem;
+  height: 21.1rem !important;
+  width: 18.6rem !important;
+  overflow-y: auto;
+}
+@media (min-width: 320px) {
+  .input-size {
+    margin-left: 0;
+  }
+  .task-list-container {
+    margin-top: 4rem;
+    width: 16.6rem !important;
+  }
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  opacity: 0.75;
+  font-size: 17px;
+}
+.task-msg {
+  max-width: 215px !important;
+  overflow-x: hidden;
+}
+
+/* css attribute selector */
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  border: none;
+  background-image: url("../public/checked-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.task-msg.checked {
+  opacity: 0.5 !important;
+}
+
+/* css pseudo-element selector */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 195, 195);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
